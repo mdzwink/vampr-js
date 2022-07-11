@@ -10,7 +10,7 @@ describe("Vampire", function() {
     rootVampire = new Vampire("root");
   });
 
-  describe("totalDescendents", function() {
+  describe("totalDescendents", () => {
     let offspring1, offspring2, offspring3, offspring4, offspring5, offspring6, offspring7, offspring8;
     beforeEach(() => {
       offspring1 = new Vampire("a");
@@ -31,7 +31,6 @@ describe("Vampire", function() {
       offspring6.addOffspring(offspring7);
       offspring2.addOffspring(offspring8);
     });
-
     it("should give the total descendents underneath a specific vampire", () => {
       expect(rootVampire.totalDescendents).to.equal(8);
       expect(offspring1.totalDescendents).to.equal(0);
